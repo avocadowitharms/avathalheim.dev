@@ -75,7 +75,7 @@ h1 span {
 
 .nav a,
 .links a,
-.project a {
+.project-link {
   color: var(--text);
   text-decoration: none;
   border-bottom: 1.5px solid var(--text);
@@ -84,7 +84,7 @@ h1 span {
 
 .nav a:hover,
 .links a:hover,
-.project a:hover {
+.project-link:hover {
   border-bottom-width: 3px;
 }
 
@@ -119,11 +119,11 @@ h2 {
 
 .project {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 32px;
-  align-items: end;
-  padding: 0 0 44px;
-  margin-bottom: 44px;
+  grid-template-columns: minmax(0, 0.78fr) minmax(360px, 1fr);
+  gap: clamp(28px, 5vw, 68px);
+  align-items: center;
+  padding: 0 0 58px;
+  margin-bottom: 58px;
   border-bottom: 1px solid var(--soft-line);
 }
 
@@ -139,6 +139,11 @@ h3 {
   line-height: 1;
 }
 
+.project-copy {
+  display: grid;
+  gap: 22px;
+}
+
 .project p,
 .about p {
   max-width: 700px;
@@ -147,9 +152,39 @@ h3 {
   font-size: 1.05rem;
 }
 
-.project a {
+.project-link {
   white-space: nowrap;
   font-family: "Courier New", monospace;
+}
+
+.project-media {
+  display: block;
+  padding: clamp(10px, 1.8vw, 18px);
+  background: #f5f5f5;
+  border: 1px solid var(--soft-line);
+  border-radius: 8px;
+  box-shadow: 0 24px 60px rgba(17, 17, 17, 0.1);
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.project-media:hover {
+  transform: translateY(-4px);
+  border-color: var(--text);
+  box-shadow: 0 30px 72px rgba(17, 17, 17, 0.16);
+}
+
+.project-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.project:nth-of-type(2) .project-media img {
+  object-fit: contain;
+  background: #ffffff;
 }
 
 .split {
@@ -219,6 +254,10 @@ li + li {
 
   .project {
     align-items: start;
+  }
+
+  .project-media {
+    padding: 10px;
   }
 
   .footer {
