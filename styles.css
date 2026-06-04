@@ -30,6 +30,7 @@ body {
 }
 
 .hero {
+  position: relative;
   min-height: 72vh;
   display: flex;
   flex-direction: column;
@@ -66,6 +67,9 @@ h1 span {
 }
 
 .nav {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: grid;
   gap: 8px;
   font-weight: 400;
@@ -287,6 +291,7 @@ li + li {
   }
 
   .nav {
+    position: static;
     display: flex;
     flex-wrap: wrap;
     gap: 14px 20px;
