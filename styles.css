@@ -68,7 +68,7 @@ h1 span {
 .nav {
   display: grid;
   gap: 8px;
-  font-weight: 800;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
@@ -177,8 +177,9 @@ h3 {
 .project-media img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  max-height: 420px;
+  height: auto;
+  object-fit: contain;
   border-radius: 5px;
 }
 
