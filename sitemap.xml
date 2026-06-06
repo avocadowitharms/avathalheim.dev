@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://avathalheim.dev/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://avathalheim.dev/articles/</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://avathalheim.dev/articles/launching-is-different/</loc>
+    <lastmod>2026-06-06</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avathalheim.dev/articles/why-i-removed-account-creation-from-my-time-tracker/</loc>
+    <lastmod>2026-06-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avathalheim.dev/articles/why-im-building-a-repository-first-project-manager/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avathalheim.dev/articles/ai-is-writing-most-of-my-code-but-im-still-building-the-product/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avathalheim.dev/articles/one-month-of-building-drift/</loc>
+    <lastmod>2026-04-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>
