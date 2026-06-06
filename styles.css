@@ -530,6 +530,18 @@ li + li {
   color: var(--muted);
 }
 
+.article-content figure {
+  margin: 34px 0;
+}
+
+.article-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--soft-line);
+  border-radius: 8px;
+}
+
 .article-neighbors {
   display: grid;
   grid-template-columns: 1fr 1fr;

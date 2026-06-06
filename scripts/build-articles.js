@@ -146,6 +146,14 @@ function renderMarkdown(markdown) {
       continue;
     }
 
+    const image = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (image) {
+      flushParagraph();
+      closeList();
+      html.push(`<figure><img src="${escapeAttr(image[2])}" alt="${escapeAttr(image[1])}" loading="lazy" /></figure>`);
+      continue;
+    }
+
     const bullet = line.match(/^\s*[-*]\s+(.+)$/);
     if (bullet) {
       flushParagraph();
@@ -321,7 +329,7 @@ ${head({
     <section class="articles-hero">
       <p class="eyebrow">Development Journal</p>
       <h1>&lt;Articles&gt;</h1>
-      <p>Notes from building independent software: project updates, technical decisions, launch stories, experiments, and lessons learned while shipping products in public.</p>
+      <p>Notes from building independent software: project updates, technical decisions, launch stories, experiments, and lessons learned.</p>
     </section>
 
     <section class="article-controls" aria-label="Article filters">
