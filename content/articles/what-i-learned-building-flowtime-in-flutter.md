@@ -1,8 +1,8 @@
 ---
 title: What I Learned Building Flowtime in Flutter
 description: A practical reflection on Flutter architecture, state, polish, and shipping a small productivity app.
-date: 2026-05-18
-updated: 2026-05-18
+date: 2026-06-06
+updated: 2026-06-06
 tags: [Flowtime, Flutter, Architecture, Development]
 project: Flutter
 featured: true

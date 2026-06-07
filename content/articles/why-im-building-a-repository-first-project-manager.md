@@ -1,8 +1,8 @@
 ---
 title: Why I'm Building a Repository-First Project Manager
 description: The product thinking behind Drift, a project manager built around repositories, tasks, docs, and developer workflows.
-date: 2026-05-09
-updated: 2026-05-09
+date: 2026-06-05
+updated: 2026-06-05
 tags: [Drift, Product Design, Architecture, Development]
 project: Drift
 featured: true

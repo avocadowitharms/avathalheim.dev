@@ -1,8 +1,8 @@
 ---
 title: One Month of Building Drift
 description: A short development log about the first month of shaping Drift from idea into a working repository-first workspace.
-date: 2026-04-18
-updated: 2026-04-18
+date: 2026-06-05
+updated: 2026-06-05
 tags: [Drift, Development, Launch, Lessons Learned]
 project: Drift
 featured: false

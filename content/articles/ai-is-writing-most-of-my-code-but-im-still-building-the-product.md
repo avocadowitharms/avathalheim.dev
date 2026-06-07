@@ -1,8 +1,8 @@
 ---
 title: AI Is Writing Most of My Code, But I'm Still Building The Product
 description: A reflection on using AI heavily while keeping ownership of product direction, taste, debugging, and shipping decisions.
-date: 2026-04-29
-updated: 2026-04-29
+date: 2026-06-05
+updated: 2026-06-05s
 tags: [AI, Development, Product Design, Lessons Learned]
 project: AI Development
 featured: false

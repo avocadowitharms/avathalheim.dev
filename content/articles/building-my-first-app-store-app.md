@@ -1,8 +1,8 @@
 ---
 title: Building My First App Store App
 description: Notes from taking an independent app from local builds to a real App Store release.
-date: 2026-05-28
-updated: 2026-05-28
+date: 2026-06-04
+updated: 2026-06-04
 tags: [Launch, Development, Lessons Learned]
 project: Flowtime
 featured: true
