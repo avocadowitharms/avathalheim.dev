@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>One Month of Building Drift | Ava Thalheim</title>
-  <meta name="description" content="A short development log about the first month of shaping Drift from idea into a working repository-first workspace." />
-  <link rel="canonical" href="https://avathalheim.dev/articles/one-month-of-building-drift/" />
-  <meta property="og:title" content="One Month of Building Drift | Ava Thalheim" />
-  <meta property="og:description" content="A short development log about the first month of shaping Drift from idea into a working repository-first workspace." />
+  <title>drift - update | Ava Thalheim</title>
+  <meta name="description" content="small update on the development of drift - my project management tool built around repositories." />
+  <link rel="canonical" href="https://avathalheim.dev/articles/drift-update/" />
+  <meta property="og:title" content="drift - update | Ava Thalheim" />
+  <meta property="og:description" content="small update on the development of drift - my project management tool built around repositories." />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://avathalheim.dev/articles/one-month-of-building-drift/" />
+  <meta property="og:url" content="https://avathalheim.dev/articles/drift-update/" />
   <meta property="og:image" content="https://avathalheim.dev/assets/favicon.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="One Month of Building Drift | Ava Thalheim" />
-  <meta name="twitter:description" content="A short development log about the first month of shaping Drift from idea into a working repository-first workspace." />
+  <meta name="twitter:title" content="drift - update | Ava Thalheim" />
+  <meta name="twitter:description" content="small update on the development of drift - my project management tool built around repositories." />
   <meta name="twitter:image" content="https://avathalheim.dev/assets/favicon.png" />
   <link rel="icon" href="../../assets/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="512x512" href="../../assets/favicon.png" />
@@ -21,7 +21,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png" />
   <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="../../styles.css" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"One Month of Building Drift","description":"A short development log about the first month of shaping Drift from idea into a working repository-first workspace.","datePublished":"2026-06-05","dateModified":"2026-06-05","author":{"@type":"Person","name":"Ava Thalheim","jobTitle":"Independent Software Developer","url":"https://avathalheim.dev"},"mainEntityOfPage":"https://avathalheim.dev/articles/one-month-of-building-drift/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"drift - update","description":"Small update on the development of drift - my project management tool built around repositories.","datePublished":"2026-06-09","dateModified":"2026-06-09","author":{"@type":"Person","name":"Ava Thalheim","jobTitle":"Independent Software Developer","url":"https://avathalheim.dev"},"mainEntityOfPage":"https://avathalheim.dev/articles/drift-update/"}</script>
 </head>
 <body>
   <main class="page article-page">
@@ -38,44 +38,41 @@
     <article class="article-shell">
       <header class="article-header">
         <a class="back-link" href="../index.html">&larr; Articles</a>
-        <p class="eyebrow">Drift</p>
-        <h1>One Month of Building Drift</h1>
-        <p class="article-description">A short development log about the first month of shaping Drift from idea into a working repository-first workspace.</p>
+        <p class="eyebrow">drift</p>
+        <h1>drift - update</h1>
+        <p class="article-description">small update on the development of drift - my project management tool built around repositories.</p>
         <div class="article-meta">
           <span>Ava Thalheim</span>
-          <time datetime="2026-06-05">Jun 5, 2026</time>
+          <time datetime="2026-06-09">Jun 9, 2026</time>
           <span>1 min read</span>
         </div>
-        <div class="tag-row"><span>Drift</span><span>Development</span><span>Launch</span><span>Lessons Learned</span></div>
+        <div class="tag-row"><span>Development</span><span>BuildInPublic</span></div>
       </header>
 
-      <div class="article-layout has-toc">
-        <aside class="toc" aria-label="Table of contents">
-          <p class="eyebrow">Contents</p>
-          <a href="#month-one">Month one</a><a href="#what-moved-forward">What moved forward</a><a href="#what-i-am-watching">What I am watching</a>
-        </aside>
+      <div class="article-layout no-toc">
+        
         <div class="article-content">
-          <h2 id="month-one">Month one</h2>
-<p>The first month of Drift has mostly been about finding the product&#039;s center.</p>
-<p>I know I want a workspace around repositories. The question is how much belongs in the first version and how much should wait until the product has earned more complexity.</p>
-<h2 id="what-moved-forward">What moved forward</h2>
+          <p>I&#039;ve been working on drift, a project management tool for developers.</p>
+<p>The idea is to keep tasks, notes, images, bugs and repository workflows connected instead of spreading them across multiple tools.</p>
+<figure><img src="../../assets/articles/drift-update.jpg" alt="Drift running on desktop, emulator, and physical device" loading="lazy" /></figure>
+<p>Currently working on desktop and mobile sync, repository integrations and local-first data storage.</p>
+<h3 id="local-first-persistence-with-sqlite">Local-First Persistence with SQLite</h3>
+<p>To lay the foundation for offline-first sync and better reliability, I migrated the local storage from legacy JSON/preference files to SQLite (using Drift ORM).</p>
+<p>Here is what&#039;s new:</p>
 <ul>
-<li>Clearer positioning around repository-first project management</li>
-<li>Early thinking around tasks, docs, and project context</li>
-<li>Better separation between product ideas and implementation details</li>
-<li>A growing list of things not to build yet</li>
+<li><strong>SQLite Database Layer</strong>: Moved notes, tags, media folders, images, and mobile uploads into transactional tables.</li>
+<li><strong>Robust Migrations</strong>: Added schema versioning and upgrade paths to automatically migrate existing workspaces and media files without data loss.</li>
+<li><strong>Mobile Uploads &amp; Sync</strong>: Added dedicated entities to queue and sync mobile uploads and note updates.</li>
+<li><strong>Data Consistency</strong>: Added soft-deletes and relational constraints to keep local states clean during background syncing.</li>
 </ul>
-<h2 id="what-i-am-watching">What I am watching</h2>
-<p>The biggest risk is turning Drift into another heavy project management tool with a developer-themed wrapper.</p>
-<p>The goal is the opposite: less overhead, more context, and a product that helps me resume real work faster.</p>
-<p>That is the thread I want to keep following.</p>
+<p>Still very early, but it&#039;s starting to come together.</p>
         </div>
       </div>
     </article>
 
     <nav class="article-neighbors" aria-label="Article navigation">
-      <a href="../why-im-building-a-repository-first-project-manager/index.html"><span>Previous</span>Why I&#039;m Building a Repository-First Project Manager</a>
-      <a href="../ai-is-writing-most-of-my-code-but-im-still-building-the-product/index.html"><span>Next</span>AI Is Writing Most of My Code, But I&#039;m Still Building The Product</a>
+      <a href="../drift-mobile-is-starting-to-take-shape/index.html"><span>Previous</span>Drift Mobile Is Starting to Take Shape</a>
+      <span></span>
     </nav>
 
     <section class="section related-articles">
@@ -89,15 +86,6 @@
           <h2><a href="../drift-mobile-is-starting-to-take-shape/index.html">Drift Mobile Is Starting to Take Shape</a></h2>
           <p>A small development update as Drift mobile starts feeling like a real app instead of a collection of ideas.</p>
           <div class="tag-row"><span>Drift</span><span>Development</span></div>
-        </article><article class="article-card" data-title="why i&#039;m building a repository-first project manager" data-description="the product thinking behind drift, a project manager built around repositories, tasks, docs, and developer workflows." data-project="Drift" data-tags="Drift,Product Design,Architecture,Development">
-          <div class="article-card-meta">
-            <time datetime="2026-06-05">Jun 5, 2026</time>
-            <span>1 min read</span>
-            <span>Drift</span>
-          </div>
-          <h2><a href="../why-im-building-a-repository-first-project-manager/index.html">Why I&#039;m Building a Repository-First Project Manager</a></h2>
-          <p>The product thinking behind Drift, a project manager built around repositories, tasks, docs, and developer workflows.</p>
-          <div class="tag-row"><span>Drift</span><span>Product Design</span><span>Architecture</span><span>Development</span></div>
         </article><article class="article-card" data-title="launching is different" data-description="a short reflection on the moment an app stops being private code and starts becoming something other people can install." data-project="Personal" data-tags="Launch,Development,Lessons Learned">
           <div class="article-card-meta">
             <time datetime="2026-06-06">Jun 6, 2026</time>
@@ -107,6 +95,15 @@
           <h2><a href="../launching-is-different/index.html">Launching Is Different</a></h2>
           <p>A short reflection on the moment an app stops being private code and starts becoming something other people can install.</p>
           <div class="tag-row"><span>Launch</span><span>Development</span><span>Lessons Learned</span></div>
+        </article><article class="article-card" data-title="ai is writing most of my code, but i&#039;m still building the product" data-description="a reflection on using ai heavily while keeping ownership of product direction, taste, debugging, and shipping decisions." data-project="AI Development" data-tags="AI,Development,Product Design,Lessons Learned">
+          <div class="article-card-meta">
+            <time datetime="2026-06-05">Jun 5, 2026</time>
+            <span>2 min read</span>
+            <span>AI Development</span>
+          </div>
+          <h2><a href="../ai-is-writing-most-of-my-code-but-im-still-building-the-product/index.html">AI Is Writing Most of My Code, But I&#039;m Still Building The Product</a></h2>
+          <p>A reflection on using AI heavily while keeping ownership of product direction, taste, debugging, and shipping decisions.</p>
+          <div class="tag-row"><span>AI</span><span>Development</span><span>Product Design</span><span>Lessons Learned</span></div>
         </article></div>
     </section>
 
